@@ -3,12 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SISTEMA UIP</title>
 </head>
 <body>
-    <section class="head">
+    <video autoplay muted loop id="video-fondo">
+        <source src="../video/nubes.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+    <div class="header">
+        <section class="logo">
+            <img src="img/logo.png" alt="">
+        </section>
+    </div>
 
-    </section>
+    <div class="title">
+        <h3>SALA SITUACIONAL UIP</h3>
+    </div>
     
+    <div class="acceso">
+        <div class="user">
+            <img src="img/login.gif" alt="">
+        </div>
+        <div class="correo">
+            <table>
+                <tr>
+
+                    <td>  INGRESE SU CORREO ELECTRONICO  <i class="fa-solid fa-user"></i> <input type="text"  id="email"></td>
+                </tr>
+                <tr>
+                    <td> INGRESAR CONTRASEÑA  <i class="fa-solid fa-lock"></i> <input type="text" id="password"> </td>
+                </tr>
+            </table>
+            <button>
+                INICIAR SESION
+            </button>
+        </div>
+        
+
+    </div>
+    <footer class="footer">
+        <section class="footer-izq">
+            UNIDAD DE INTELIGENCIA PRESTACIONAL
+        </section>
+        <section class="footer-der">
+            Problemas de Acceso?
+            <br>
+            Envianos un correo que con gusto te ayudaremos
+        </section>
+   
+    </div>
+
 </body>
 </html>
