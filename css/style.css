@@ -1,15 +1,18 @@
-
-.fondo{
-
-    position: relative;
-    width: 100%;
-    height: 100vh;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    background-color: #f0f2f5; /* Color de fondo similar al recuadro de ejemplo */
 }
 
 #video-fondo {
-    position: absolute;
-    top: 45%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -20,56 +23,194 @@
     background-size: cover;
 }
 
-.header img{
-    padding: 20px;
+/* Encabezado y logo */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header .logo img {
     width: 30vh;
+    margin-top: 20px;
 }
 
-.title{
-    text-align: center;
-    font-size: 25px;
-}
-.acceso{
-    padding-top: 2%;
+/* Contenedor de Login */
+.login-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.login-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
     text-align: center;
-    justify-content: center;
-}
-.acceso .user img{
-    width: 50%;
-    border-radius: 50vh;
-    border-color: black;
-    border: 5px solid #000;
-}
-.acceso .correo table{
-    text-align: center;
-    justify-content: center;
-
-}
-.acceso .correo table td{
-    padding: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.acceso .correo table .fa-user{
-    color: rgb(0, 153, 255);
-    font-size: 25px;
-}
-.acceso .correo table .fa-lock{
-    color: rgb(75, 52, 4);
-    font-size: 25px;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    padding-top: 14%;
-
-  
+.login-form h2 {
+    margin: 0 0 20px;
+    color: #333;
 }
-.footer .footer-izq{
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
     text-align: left;
-    padding-right: 50%;
 }
-.footer .footer-der{
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    margin-bottom: 20px;
     text-align: right;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-login {
+    background-color: #6c63ff; /* Color similar al del botón en la primera imagen */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-login:hover {
+    background-color: #5a54c4;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Escondido por defecto */
+    position: fixed; 
+    z-index: 1; /* Se coloca sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0,0,0,0.5); /* Fondo negro translúcido */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrado vertical */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del contenido */
+    max-width: 500px; /* Máximo ancho */
+    text-align: center;
+    border-radius: 10px;
+}
+.modal-content .fa-solid {
+    color: blue;
+    font-size: 25px;
+}
+
+.modal-content .fa-brands {
+    color: green;
+    font-size: 25px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Pie de página */
+.footer {
+    width: 100%;
+    background-color: #333; /* Fondo oscuro para contraste */
+    color: white; /* Texto blanco para contraste */
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    font-size: 1.3em; /* Tamaño de fuente más grande */
+}
+
+.footer-right {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+.footer-right a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-right a:hover {
+    text-decoration: underline; /* Subraya al pasar el cursor */
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Cambia a columna en dispositivos móviles */
+        text-align: center;
+    }
+    .footer-left, .footer-right {
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%;
+    }
 }

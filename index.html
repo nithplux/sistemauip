@@ -12,48 +12,63 @@
         <source src="../video/nubes.mp4" type="video/mp4">
         Tu navegador no soporta la reproducción de videos.
     </video>
-    <div class="header">
-        <section class="logo">
-            <img src="img/logo.png" alt="">
-        </section>
-    </div>
 
-    <div class="title">
-        <h3>SALA SITUACIONAL UIP</h3>
-    </div>
-    
-    <div class="acceso">
-        <div class="user">
-            <img src="img/login.gif" alt="">
-        </div>
-        <div class="correo">
-            <table>
-                <tr>
-
-                    <td>  INGRESE SU CORREO ELECTRONICO  <i class="fa-solid fa-user"></i> <input type="text"  id="email"></td>
-                </tr>
-                <tr>
-                    <td> INGRESAR CONTRASEÑA  <i class="fa-solid fa-lock"></i> <input type="text" id="password"> </td>
-                </tr>
-            </table>
-            <button>
-                INICIAR SESION
-            </button>
+    <div class="login-container">
+        <div class="header">
+            <section class="logo">
+                <img src="img/logo.png" alt="Logo UIP">
+            </section>
         </div>
         
-
+        <h3 class="title">SALA SITUACIONAL UIP</h3>
+        
+        <div class="login-form">
+            <form action="#" method="post">
+                <h2>Inicio de sesión</h2>
+                <div class="input-group">
+                    <label for="email">Nombre de usuario</label>
+                    <input type="email" id="email" name="email" placeholder="Nombre de usuario" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <div class="forgot-password">
+                    <a href="#" onclick="abrirModal()">¿Olvidó su contraseña?</a>
+                </div>
+                <button type="submit" class="btn-login">Iniciar</button>
+            </form>
+        </div>
     </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>PARA CONTACTAR A SOPORTE DE LA UNIDAD DE INTELIGENCIA PRESTACIONAL PORFAVOR COMUNIQUESE A LOS SIGUIENTES ENLACES</p>
+            <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:estadistica.uip9@gmail.com">estadistica.uip9@gmail.com </i></a></p>
+            <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/912454308" target="_blank">912454308 </a></p>
+        </div>
+    </div>
+
     <footer class="footer">
-        <section class="footer-izq">
-            UNIDAD DE INTELIGENCIA PRESTACIONAL
-        </section>
-        <section class="footer-der">
-            Problemas de Acceso?
-            <br>
-            Envianos un correo que con gusto te ayudaremos
-        </section>
-   
-    </div>
+        <div class="footer-content">
+            <div class="footer-left">UNIDAD DE INTELIGENCIA PRESTACIONAL</div>
+            <div class="footer-right">
+                Cualquier consulta al correo: 
+                <a href="mailto:estadistica.uip9@gmail.com">estadistica.uip9@gmail.com <i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function abrirModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
 
+        function cerrarModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
